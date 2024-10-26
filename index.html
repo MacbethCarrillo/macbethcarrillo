@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRN PACK | Envío Express Paquetería y Mensajería</title>
+    <link rel="icon" type="image/x-icon" href="images/icon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylesIndex.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img src="images/logo.jpg" alt="Logo" class="logo">
+        </a>
+        <button class="menu-btn" onclick="toggleMenu()"></button>
+        <div class="nav-container">
+            <nav>
+                <a href="/">Inicio</a>
+                <a href="/nosotros">Nosotros</a>
+                <a href="/servicios">Servicios</a>
+                <a href="/sucursales">Sucursales</a>
+                <a href="/contacto">Contacto</a>
+                <a href="https://wa.me/526671317024?text=Hola%20quiero%20rastrear%20mi%20envio,%20esta%20es%20mi%20guia:" class="rastreo" target="_blank">Rastreo</a> 
+            </nav>
+        </div>
+        <button class="button" onclick="window.open('https://web.whatsapp.com/send?phone=6671317024text=Hola quiero rastrear mi envio porfavor.', '_blank')">Rastrear</button>
+    </header>
+
+    <!-- Carrusel de imágenes -->
+    <div class="carousel" id="carousel">
+        <button class="carousel-btn prev-btn" onclick="prevSlide()">&#10094;</button>
+        <div class="carousel-images">
+            <div class="carousel-image-container">
+                <img src="images/publicidad1.jpg" alt="Imagen1">
+                <div class="carousel-text">RECIBE EN MENOS DE 24 HORAS</div>
+            </div>
+            <div class="carousel-image-container">
+                <img src="images/publicidad2.jpg" alt="Imagen2">
+                <div class="carousel-text">SERVICIO OCURRE</div>
+            </div>
+            <div class="carousel-image-container">
+                <img src="images/publicidad3.jpg" alt="Imagen3">
+                <div class="carousel-text">SERVICIO A DOMICILIO</div>
+            </div>
+        </div>
+        <button class="carousel-btn next-btn" onclick="nextSlide()">&#10095;</button>
+        <div class="carousel-dots">
+            <button class="dot" data-index="0"></button>
+            <button class="dot" data-index="1"></button>
+            <button class="dot" data-index="2"></button>
+        </div>
+    </div>
+    
+
+    
+    <!-- Sección Nosotros -->
+    <div class="nosotros">
+        <div class="texto-nosotros">
+            <h2 style="color: #7dd557">CONÓCENOS</h2>
+            <p>
+                Somos una empresa de paquetería y mensajería con envío express comprometida con nuestros 
+                clientes para brindarles siempre el mejor servicio, basada en principios y valores.
+                <br>
+                <br>
+                Con sede en Culiacán, CRN PACK esta comprometida en brindar un servicio de calidad a nivel nacional y regional. 
+                Contamos con sucursales en Culiacán y Guasave ofreciendo el servicio ocurre, con rutas diarias 
+                para entregas rápidas. 
+                <br>
+                <br>
+                Además, contamos con aliados para ampliar nuestra 
+                cobertura ofreciendo servicios más extensos. Con amplia experiencia en el sector, garantizamos la satisfacción y seguridad en todos tus envíos.
+             <p>
+                <button class="ver-mas-btn" onclick="window.location.href='nosotros.html'">Ver más</button>
+        </div>
+        <div class="imagen-nosotros">
+            <img src="images/mostrador_conocenos.jpg" alt="Imagen" />
+        </div>
+    </div>
+
+    <!-- Sección Servicios -->
+    <div class="servicios">
+        <h2>SERVICIOS</h2>
+        <p>Ofrecemos una amplia gama de servicios para satisfacer todas tus necesidades de envío<p>
+        <div class="recuadros-servicios">
+            <div class="recuadro">
+                <img src="images/servicio1.png" alt="Regional">
+                <div class="texto-recuadro">Cobertura Regional</div>
+                
+            </div>
+            <div class="recuadro">
+                <img src="images/servicio3.jpg" alt="Nacional">
+                <div class="texto-recuadro">Cobertura Nacional</div>
+                
+            </div>
+            <div class="recuadro">
+                <img src="images/servicio2.png" alt="Internacional">
+                <div class="texto-recuadro">Cobertura Internacional</div>
+                
+            </div>
+            <div class="recuadro">
+                <img src="images/servicio4.png" alt="Recoleccion">
+                <div class="texto-recuadro">Recolección<br>Sin Costo</div>
+                
+            </div>
+            <div class="recuadro">
+                <img src="images/servicio5.png" alt="Domicilio">
+                <div class="texto-recuadro">Servicio a Domicilio</div>
+                
+            </div>
+            <div class="recuadro">
+                <img src="images/servicio6.png" alt="Ocurre">
+                <div class="texto-recuadro">Servicio<br>Ocurre</div>
+                
+            </div>
+        </div>
+        
+        <div class="imagen-RFS">
+            <img src="images/RFS.png" alt="RFS" />
+        </div>
+        <p>Para más información acerca de nuestros Términos y Condiciones, haz clic en el boton de Ver más.<p>
+            <button class="ver-mas-btnServ" onclick="window.location.href='servicios.html'">Ver más</button>
+    </div>
+
+<!-- Sección Sucursales -->
+
+ <div class="div-sucursales">
+    <p>COBERTURA EN TODO MÉXICO</p>
+</div>
+
+<div class="sucursales">
+    <div class="imagen-sucursal">
+        <img src="images/coberturaSinaloa.jpg" alt="Cobertura" class="imagen-sucursales">
+    </div>
+    <div class="mapa-sucursales">
+        <label for="sucursales-select">Principales Sucursales:</label>
+        <select id="sucursales-select">
+            <option value="culiacan" selected>Culiacán</option>
+            <option value="guasave">Guasave</option>
+        </select>
+        <div class="map-container">
+            <iframe id="mapa-sucursal" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d879.5239729484308!2d-107.39984756060244!3d24.823387427683482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86bcdb006754c6ad%3A0x1c781579c7476a81!2sCRN%20PACK%20CULIACAN!5e0!3m2!1ses-419!2smx!4v1726946954633!5m2!1ses-419!2smx" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="contacto">
+    <div class="formulario-contacto">
+        <h2>CONTÁCTANOS</h2>
+        <form id="contacto-form" action="https://formsubmit.co/5d0cf0be5623e74329edc497fa154197" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="name" required>
+            
+            <label for="email">Correo electrónico:</label>
+            <input type="email" name="email" required>
+            
+            <label for="subject">Celular:</label>
+            <input type="tel" name="subject" required>
+            
+            <label for="comments">Asunto:</label>
+            <textarea name="comments" rows="4" required></textarea>
+            
+            <button type="submit">Enviar</button>
+
+            <input type="hidden" name="_next" value="http://192.168.1.14:5500/">
+            <input type="hidden" name="_captcha" value="false">
+        </form>
+    </div>
+    
+    <div class="informacion-contacto">
+        <h2>Información de contacto</h2>
+        <p>Email: contacto@crnpack.com</p>
+        <p>Teléfono: (667) 131 7024</p>
+        <p>Dirección: Blvrd Enrique Sánchez Alonso 2072 local 5, Tres Rios, 80030 Culiacán Rosales, Sin.</p>
+        <h3>Síguenos en nuestras redes</h3>
+        <ul class="redes-sociales">
+            <li><a href="https://wa.me/526671317024?text=Hola%20estoy%20interesado%20en%20sus%20servicios."target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+            <li><a href="https://www.facebook.com/crnpack/"target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/crnpack/"target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.tiktok.com/@crnpack"target="_blank"><i class="fab fa-tiktok"></i></a></li>
+        </ul>  
+    </div>
+</div>
+
+<div class="footer">
+    <p>© 2024 CRN PACK. Todos los derechos reservados - Envío Express Paquetería y Mensajería</p>
+    <a href="#LINKKKKKK" class="footer-link">Aviso de Privacidad</a> | 
+        <a href="#LINKKKKKK" class="footer-link">Términos y Condiciones</a>
+</div>
+
+
+<a href="https://wa.me/526671317024?text=Hola%20estoy%20interesado%20en%20sus%20servicios" target="_blank" class="whatsapp-float">
+    <img src="images/whatsapp-icon.png" alt="WhatsApp" />
+</a>
+
+    <script src="js/script.js"></script>
+
+    </body>
+</html>
