@@ -1,0 +1,181 @@
+.comunicate {
+    position: relative; /* Posiciona el cuadro negro sobre la imagen */
+    width: 100%;
+    height: auto;
+}
+
+.comunicate img {    
+    width: 100%; /* Asegura que la imagen siempre ocupe el 100% del ancho */
+    height: auto; /* Mantiene la proporción de la imagen */
+    min-height: 100%; /* Asegura que la imagen cubra al menos el 100% de la altura */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionarse */
+    display: block; 
+    pointer-events: none; 
+    user-select: none; 
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    -moz-user-select: none; 
+}
+
+@media (max-width: 1500px) {
+    .comunicate {
+        height: auto; /* Cambia a auto para evitar espacios en la parte inferior */
+    }
+    .comunicate img {
+        height: 100%; /* Ajusta la altura de la imagen al contenedor */
+        min-height: auto; /* Desactiva la restricción de altura mínima en pantallas pequeñas */
+    }
+}
+
+
+
+.contacto {
+    display: flex;
+    justify-content: flex-start; 
+    background-color: #10216f;
+    padding: 40px;
+    color: white;
+}
+
+.formulario-contacto {
+    flex: 1;
+    margin-left: 100px; 
+}
+
+.formulario-contacto h2 {
+    font-size: 2.5em;
+    color: #7dd557;
+    text-align: center;
+}
+
+.formulario-contacto form {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0; 
+}
+
+.formulario-contacto label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.formulario-contacto input, .formulario-contacto textarea {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.formulario-contacto textarea {
+    resize: vertical; 
+}
+
+.formulario-contacto button {
+    padding: 12px 20px;
+    background-color: #7dd557;
+    color: #10216f;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.formulario-contacto button:hover {
+    background-color: #5ab93d;
+}
+
+.informacion-contacto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin-left: 60px;
+}
+
+.informacion-contacto h2 {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 2.5em;
+    color: #7dd557;
+    text-align: left;
+}
+    
+    .informacion-contacto p {
+        font-family: 'Trebuchet MS', sans-serif;
+        font-size: 1.5em;
+        color: white;
+        text-align: left;
+
+}
+
+.redes-sociales {
+    list-style: none;
+    padding: 0;
+    display: flex; 
+    justify-content: left;
+    gap: 20px; 
+}
+
+.redes-sociales li {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.redes-sociales a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em; 
+    transition: color 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    color: #7dd557; 
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .contacto {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .informacion-contacto {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .informacion-contacto h2{
+        text-align: center;
+        font-size: 2em;
+    }
+    .informacion-contacto p{
+        text-align: center;
+        font-size: 1em;
+    }
+
+    .redes-sociales {
+        justify-content: center;
+    }
+    
+    .formulario-contacto {
+        margin-left: 0; 
+    }
+    
+    .informacion-contacto {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .formulario-contacto label {
+        font-size: 1em;
+
+    }
+}

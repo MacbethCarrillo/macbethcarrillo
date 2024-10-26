@@ -1,0 +1,95 @@
+.sucursales {
+    background-color: #10216f;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.sucursales h1 {
+    color:#7dd557;
+    font-size: 3em;
+    margin-top: 20px;
+}
+.sucursales h2 {
+    color: #ffffff;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+.container {
+    background-color: #10216f;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+.options {
+    background-color: white;
+    padding: 20px;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+.options button {
+    display: block;
+    background-color: white;
+    color:#10216f;
+    border: 2px solid grey;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    width: 200px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 4px;
+}
+.options button:hover {
+    background-color: #f0f0f0;
+}
+.map {
+    width: 800px;
+    height: 600px;
+}
+
+@media (max-width: 768px) {
+
+    .sucursales h1 {
+        text-align: center;
+        color:#7dd557;
+        font-size: 2.5em;
+        margin-top: 20px;
+    }
+    .sucursales h2 {
+        text-align: center;
+        color: #ffffff;
+        font-size: 1.5em;
+        margin-bottom: 30px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column-reverse; /* Esto pone las opciones debajo del mapa */
+        align-items: center;
+    }
+
+    .options {
+        margin-top: 20px;
+       margin-left: 20px;
+        width: 90%; /* Ajusta el ancho para que no sea tan largo */
+        padding: 10px 0; /* Ajusta el padding vertical para que no se vea tan amplio */
+        text-align: center;
+        box-sizing: border-box; /* Asegura que el padding esté dentro del ancho */
+    }
+
+    .options button {
+        width: 80%; /* Asegura que los botones ocupen todo el ancho disponible */
+        margin-left: 30px;
+        padding: 10px; /* Ajusta el padding de los botones */
+    }
+
+    .map {
+        width: 100%;
+        height: 600px;
+    }
+}
+

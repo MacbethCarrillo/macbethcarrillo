@@ -1,0 +1,178 @@
+.nservicios {
+    background-color: #10216f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.img-servicios {
+    position: relative; /* Posiciona el cuadro negro sobre la imagen */
+    width: 100%;
+    height: auto;
+}
+
+.img-servicios img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block; /* Elimina el espacio debajo de la imagen */
+}
+
+.cuadro {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background-color: white;
+    color: #10216f; /* Cambia el color del texto a negro */
+    border-radius: 80px 80px 0 0;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold; /* Hace que todo el texto en el cuadro sea negrita */
+}
+
+.titulo-principal {
+    font-size: 5vw; /* Tamaño del título principal */
+    margin-bottom: 50px; /* Espacio debajo del título principal */
+    margin-top: 20px;
+    font-weight: bold; /* Negrita para el título principal */
+}
+
+.contenido {
+    display: flex;
+    justify-content: space-around; /* Espaciado uniforme entre los títulos */
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias líneas en pantallas pequeñas */
+    margin-top: 10px;
+}
+
+.elemento {
+    width: 32%; /* Cada elemento ocupa el 30% del ancho del contenedor */
+    margin-bottom: 20px; /* Espacio entre los elementos */
+    padding: 0 0 10px; /* Añade un poco de espacio en la parte inferior si es necesario */
+}
+
+.titulo-con-imagen {
+    display: flex;
+    align-items: center; /* Alinea verticalmente la imagen con el título */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    margin-bottom: 10px;
+}
+
+.titulo-con-imagen img {
+    width: 16%;
+    margin-right: 5px; /* Reduce el espacio entre la imagen y el título */
+}
+
+.titulo {
+    font-size: 2vw; /* Tamaño para el título */
+    margin: 0; /* Elimina el margen del título */
+    font-weight: bold; /* Negrita para los títulos */
+}
+
+.subtitulo {
+    font-size: 1.5vw; /* Tamaño para el subtítulo */
+    margin: 0; /* Elimina el margen del subtítulo */
+    font-weight: bold; /* Negrita para los subtítulos */
+}
+
+@media (min-width: 1400px) and (max-width:2000px){
+    .cuadro {
+        height: 400px; /* Aumenta la altura del cuadro a 120px (ajusta según sea necesario) */
+    }
+}
+
+@media (max-width: 770px) {
+
+    .cuadro {
+        border-radius: 80px 80px 80px 80px;
+        height: 605px; /* Ajusta manualmente la altura en pantallas pequeñas */
+    }
+
+    .img-servicios{
+        width: 100%; /* Asegura que la imagen ocupe el 100% del ancho */
+        height: 600px; /* Ajusta manualmente la altura en pantallas pequeñas */
+        margin: 0; /* Elimina cualquier margen */
+        padding: 0; /* Elimina cualquier padding */
+
+    }
+
+    .img-servicios img {
+        width: 0;
+    }
+
+    .titulo-con-imagen img {
+        width: 20%;
+        margin-right: 0; /* Reduce el espacio entre la imagen y el título */
+        margin-left: 20px;
+    }
+
+    .cuadro {
+        top: 1%;
+        width: 80%;
+    }
+
+    .titulo-principal {
+        font-size: 2em; /* Tamaño del título principal */
+        margin-bottom: 30px; /* Espacio debajo del título principal */
+        margin-top: 40px;
+        font-weight: bold; /* Negrita para el título principal */
+    }
+    .elemento {
+        width: 100%; /* Cada elemento ocupa el 30% del ancho del contenedor */
+        margin-bottom: 20px; /* Espacio entre los elementos */
+       
+    }
+
+    .titulo {
+        text-align: center;
+        font-size: 1.5em; /* Tamaño para el título */
+        margin-right: 70px;
+        font-weight: bold; /* Negrita para los títulos */
+    }
+    
+    .subtitulo {
+        text-align:center;
+        font-size: 1em; /* Tamaño para el subtítulo */
+        margin: 0; /* Elimina el margen del subtítulo */
+        font-weight: bold; /* Negrita para los subtítulos */
+    }
+}
+
+.div-publicidad {
+    background-color:#10216f;
+    min-height: auto;
+    margin-top: auto;
+    padding: 35px 10px; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.publicidad {
+    display: flex;
+    width: 100%; /* El contenedor ocupará el 100% del ancho */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina cualquier padding */
+}
+
+.publicidad img {
+    width: 50%; /* Cada imagen ocupa el 50% del ancho en pantallas grandes */
+    height: auto; /* Mantén la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra su contenedor sin deformarse */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 770px) {
+    .publicidad {
+        flex-direction: column; /* Cambia la dirección de los elementos a vertical */
+    }
+
+    .publicidad img {
+        width: 100%; /* Cada imagen ocupará el 100% del ancho en pantallas pequeñas */
+        height: auto;
+    }
+}
+

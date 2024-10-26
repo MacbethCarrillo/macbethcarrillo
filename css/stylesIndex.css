@@ -1,0 +1,690 @@
+/* ---------------------------------------DIV CARRUSEL DE IMAGENES--------------------------------- */
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%;
+    user-select: none; /* Evita que el contenido se seleccione */
+}
+
+.carousel-image-container {
+    position: relative;
+    width: 33.33%; /* Ajusta según el número de imágenes */
+}
+
+.carousel-images img {
+    width: 100%; /* Asegúrate de que la imagen ocupe todo el contenedor */
+    height: auto;
+    display: block;
+    pointer-events: none; /* Evita que el puntero interactúe con la imagen */
+    user-select: none; /* Evita que el contenido se seleccione */
+    -webkit-user-select: none; /* Evita la selección en Safari */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    -moz-user-select: none; /* Firefox */
+}
+
+.carousel-text {
+    position: absolute;
+    top: 50%;
+    left: 140px; /* Ajusta según sea necesario */
+    transform: translateY(-50%);
+    color: white;
+    font-size: 5vw; /* Ajusta el tamaño de fuente según sea necesario */
+    font-family: 'Trebuchet MS', sans-serif; /* Fuente personalizada */
+    font-weight: bold; /* Texto en negrita */
+    pointer-events: none; /* Evita la interacción con el texto */
+    user-select: none; /* Evita que el texto se seleccione */
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-dots button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ffffff80;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-dots button.active {
+    background-color: #ffffff;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 3rem;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media(max-width: 1100px) {
+    .carousel-btn {
+        display: none;
+    }
+
+    .carousel-images img {
+        height: 400px;
+        width: 120%;
+    }
+
+    .carousel-dots {
+        bottom: 20px;
+
+    }
+
+    .carousel-dots button {
+        width: 12px;
+        height: 12px;
+    }
+
+    .carousel-text {
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centrar vertical y horizontalmente */
+        font-size: 2.5em; /* Tamaño de fuente grande para pantallas pequeñas */
+    }
+}
+
+
+/* ---------------------------------------DIV NOSOTROS--------------------------------- */
+.nosotros {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    padding: 0; 
+    margin: 0;
+}
+
+.texto-nosotros {   
+    flex: 1;
+    width: 50%;
+    margin-right: 0;
+    margin-top: 20px;
+    color: #10216f;
+    text-align: justify;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.texto-nosotros h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin: 0 0 20px 0; 
+}
+
+.texto-nosotros p {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: justify;
+    margin: 0 0 20px 0; 
+}
+
+.imagen-nosotros img {
+    width: 100%;
+    display: block; 
+    margin: 0; 
+}
+
+.ver-mas-btn {
+    display: block;
+    margin: 20px auto; 
+    padding: 15px 25px; 
+    background-color: #10216f; 
+    color: white;
+    font-size: 18px;
+    font-weight: regular;
+    border: 2px solid transparent; 
+    border-radius: 50px; 
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.ver-mas-btn:hover {
+    background-color: #7dd557; 
+    color: #10216f; 
+    border: 2px solid #10216f;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Ajustes para pantallas grandes (1500px en adelante) */
+@media (min-width: 1501px) {
+    .nosotros {
+        align-items: flex-start;
+    }
+
+    .texto-nosotros {
+        width: 100%; /* El texto ahora ocupa el 40% del espacio */
+
+    }
+
+    .texto-nosotros p{
+
+        font-size: 1.5em;               /*AQUIIIIIIIIIIIIIIIIIIIIII ES PARA PANTALLAS MAAAAAS GRANDESSSSSS */
+    }
+
+    .imagen-nosotros {
+        width: 50%; /* La imagen ocupa el 60% del espacio */
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 1100px) {
+    .ver-mas-btn {
+        width: 50%; 
+        padding: 15px; 
+        font-size: 16px; 
+    }
+
+    .nosotros {
+        flex-direction: column;
+        margin: 0; 
+    }
+
+    .texto-nosotros {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .texto-nosotros p {
+        text-align: center;
+        font-size: 1em;
+    }
+
+    .imagen-nosotros {
+        width: 100%;
+    }
+
+    .imagen-nosotros img {
+        max-width: 100%;
+    }
+}
+
+
+/* ---------------------------------------DIV Servicios--------------------------------- */
+.servicios {
+    background-color: #10216f;
+    text-align: center;
+    padding: 60px 40px;
+    margin: 0; 
+    margin-bottom: 0;
+}
+
+.servicios h2 {
+    font-size: 2.5em;
+    color: #7dd557;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.servicios p {
+    color: white;
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+
+.recuadros-servicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 3px;
+    margin-top: 40px;
+}
+
+.recuadro {
+    width: 150px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1; 
+    transform: translateY(0); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 40px;
+
+}
+.recuadro img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.texto-recuadro {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #10216f;
+    text-align: center; 
+    margin-bottom: 15px;
+}
+
+.ver-mas-btnServ {
+    display: block;
+    margin: 20px auto; 
+    padding: 15px 25px; 
+    background-color: #7dd557; /* Color verde en estado normal */
+    color: #10216f;
+    font-size: 18px;
+    font-weight: regular;
+    border: 2px solid #7dd557; /* Bordes en verde en estado normal */
+    border-radius: 50px; 
+    cursor: pointer;
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.ver-mas-btnServ:hover {
+    background-color: white; /* Cambia a azul en hover */
+    color: #10216f; /* Texto en verde en hover */
+    border: 2px solid black; /* Bordes en azul en hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+
+
+.imagen-RFS {
+    align-items: center;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1000px) {
+    .imagen-RFS img {
+        width: 100%; /* Ajusta el tamaño de la imagen a un 50% de su tamaño original */
+    }
+}
+
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+
+    .servicios p {
+
+        font-size: 1.5em;
+    }
+    .recuadro { 
+        width: 170px;
+        height: 220px;
+    
+    }
+    .recuadro img {
+        width: 115px;
+        height: 115px;
+    }
+    
+    .texto-recuadro {
+        font-size: 1.4em;
+    }
+    
+    .btnCuadros {
+       
+        padding: 13px 23px; 
+        font-size: 17px;
+        border: 2px solid transparent; 
+
+    }
+
+}
+
+@media (min-width: 1601px){
+
+    .servicios p {
+
+        font-size: 1.6em;
+    }
+    .recuadro {
+        width: 185px;
+        height: 250px;
+    
+    }
+    .recuadro img {
+        width: 130px;
+        height: 130px;
+        margin-bottom: 0;
+    }
+    
+    .texto-recuadro {
+        font-size: 1.6em;
+    }
+    
+    .btnCuadros {
+       
+        padding: 16px 26px; 
+        font-size: 19px;
+        border: 2px solid transparent; 
+
+    }
+
+}
+
+@media (max-width: 400px) {
+    .recuadro {
+        width: 120px;
+    }
+
+    .texto-recuadro {
+        font-size: 1.2em;
+    }
+
+    .servicios h2 {
+        font-size: 2em; 
+    }
+    .servicios h3 {
+        font-size: 1em; 
+    }
+
+    .servicios p {
+        font-size: 1em; 
+    }
+    
+}
+
+
+/* ---------------------------------------DIV Sucursales--------------------------------- */
+.div-sucursales {
+    background-color: white;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    min-height: 20px;
+    margin-top: 33px;
+    padding: 20px 10px; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.div-sucursales p {
+    color: #7dd557; 
+    margin: 0;
+}
+.sucursales {
+    background-color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column; /* Alinea verticalmente en pantallas pequeñas */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0;
+}
+
+@media (min-width: 768px) {
+    .sucursales {
+        flex-direction: row; /* Alinea en fila para pantallas más grandes */
+        justify-content: space-between;
+    }
+}
+
+.imagen-sucursal, .mapa-sucursales {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.imagen-sucursal img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media(max-width:450px){
+
+    .imagen-sucursal img {
+        margin-bottom: 50px;
+    }
+
+}
+
+.mapa-sucursales {
+    padding: 10px;
+    border: 2px solid #d3d3d3; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    max-width: 100%;
+}
+
+/* Contenedor para el label y el select */
+.label-select-container {
+    display: flex;
+    justify-content: center; /* Asegura que ambos elementos estén alineados a la izquierda */
+    align-items: center;
+    gap: 10px; /* Espacio entre el label y el select */
+    margin-bottom: 10px; /* Espacio entre el label/select y el mapa */
+}
+
+.mapa-sucursales label {
+    color: #10216f; 
+    font-weight: bold; 
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+#sucursales-select {
+    display: block;
+    width: 100%; /* Ancho total para pantallas chicas */
+    max-width: 600px; /* Límite del ancho para pantallas grandes */
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background-color: #10216f;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Mapa */
+.map-container {
+    width: 100%;
+    text-align: center;
+}
+
+#mapa-sucursal {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: 0;
+}
+
+/* ---------------------------------------DIV Contacto--------------------------------- */ 
+
+
+.contacto {
+    display: flex;
+    justify-content: flex-start; 
+    background-color: #10216f;
+    padding: 40px;
+    color: white;
+}
+
+.formulario-contacto {
+    flex: 1;
+    margin-left: 100px; 
+}
+
+.formulario-contacto h2 {
+    font-size: 2.5em;
+    color: #7dd557;
+    text-align: center;
+}
+
+.formulario-contacto form {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0; 
+}
+
+.formulario-contacto label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.formulario-contacto input, .formulario-contacto textarea {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.formulario-contacto textarea {
+    resize: vertical; 
+}
+
+.formulario-contacto button {
+    padding: 12px 20px;
+    background-color: #7dd557;
+    color: #10216f;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.formulario-contacto button:hover {
+    background-color: #5ab93d;
+}
+
+.informacion-contacto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin-left: 60px;
+}
+
+.informacion-contacto h2 {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 2.5em;
+    color: #7dd557;
+    text-align: left;
+}
+    
+    .informacion-contacto p {
+        font-family: 'Trebuchet MS', sans-serif;
+        font-size: 1.5em;
+        color: white;
+        text-align: left;
+
+}
+
+.redes-sociales {
+    list-style: none;
+    padding: 0;
+    display: flex; 
+    justify-content: left;
+    gap: 20px; 
+}
+
+.redes-sociales li {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.redes-sociales a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em; 
+    transition: color 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    color: #7dd557; 
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .contacto {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .informacion-contacto {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .informacion-contacto h2{
+        text-align: center;
+        font-size: 2em;
+    }
+    .informacion-contacto p{
+        text-align: center;
+        font-size: 1em;
+    }
+
+    .redes-sociales {
+        justify-content: center;
+    }
+    
+    .formulario-contacto {
+        margin-left: 0; 
+    }
+    
+    .informacion-contacto {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .formulario-contacto label {
+        font-size: 1em;
+
+    }
+}

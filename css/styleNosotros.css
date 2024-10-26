@@ -1,0 +1,396 @@
+/* ---------------------------------------DIV NOSOTROS--------------------------------- */
+    .nosotros {
+        position: relative; 
+        width: 100%; 
+        height: 100vh; 
+        overflow: hidden; 
+        margin: 0; 
+        padding: 0; 
+    }
+
+    .nosotros img {
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover; 
+        display: block; 
+        pointer-events: none; /* Evita que el puntero interactúe con la imagen */
+        user-select: none; /* Evita que el contenido se seleccione */
+        -webkit-user-select: none; /* Evita la selección en Safari */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        -moz-user-select: none; /* Firefox */
+    }
+
+    .nosotros-txt {
+        position: absolute;
+        top: 10%;
+        left: 41%;
+        color: white;
+        font-size: 4vw; /* Tamaño dinámico para pantallas grandes */
+        font-family: 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+        border-radius: 15px; /* Ajusta el valor para cambiar el redondeo */
+        padding: 10px;
+    }
+
+    .nosotros-texto {
+        position: absolute;
+        text-align: justify;
+        top: 30%;
+        left: 10%;
+        right: 10%;
+        color:white;
+        font-size: 2vw; /* Tamaño dinámico para pantallas grandes */
+        font-family: 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+    }
+
+    /* Estilos para pantallas pequeñas */
+
+    @media (max-width: 600px) {
+
+        .nosotros {
+            background-color: #102171;
+            width: 100%;
+            height: 70vh; 
+            
+        }
+        .nosotros img {
+            width: 100%; /* Asegura que la imagen ocupe el 100% del ancho */
+            height: 571px; /* Ajusta manualmente la altura en pantallas pequeñas */
+            margin: 0; /* Elimina cualquier margen */
+            padding: 0; /* Elimina cualquier padding */
+        }
+
+
+        .nosotros-txt {
+            color: white;
+            top: 5%;
+            left: 20%;
+            right: auto;
+            text-align: center;
+            font-size: 2.5em; /* Tamaño fijo para pantallas pequeñas */
+        }
+
+        .nosotros-texto {
+            color: white;
+            left: 5%;
+            top: 20%;
+            right:5%;
+            text-align: center;
+            font-size: 1em; /* Tamaño fijo para pantallas pequeñas */
+        }
+ 
+    }
+
+/* ---------------------------------------DIV MISION Y VISION--------------------------------- */
+
+
+    .imagenes-dos {
+        display: flex;
+        width: 100%;
+        margin: 0; /* Elimina márgenes del contenedor */
+        padding: 0; /* Elimina cualquier relleno del contenedor */
+    }
+
+    .imagen-con-texto {
+        position: relative;
+        width: 50%;
+        margin: 0; /* Elimina cualquier margen */
+    }
+
+    .imagen-con-texto img {
+        width: 100%;
+        height: auto; /* Ajusta la altura automáticamente */
+        margin: 0; /* Elimina márgenes alrededor de la imagen */
+        padding: 0; /* Elimina padding de la imagen */
+        display: block; /* Asegura que no haya espacio extra alrededor de la imagen */
+        pointer-events: none; /* Evita que el puntero interactúe con la imagen */
+        user-select: none; /* Evita que el contenido se seleccione */
+        -webkit-user-select: none; /* Evita la selección en Safari */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        -moz-user-select: none; /* Firefox */
+    }
+
+    .txt-sobre-imagen {
+        margin: 0; /* Elimina cualquier margen */
+        font-weight: bold;
+        position: absolute;
+        top: 15%; /* Centra verticalmente el texto */
+        left: 50%; /* Centra horizontalmente el texto */
+        transform: translate(-50%, -50%); /* Ajusta el centrado del texto */
+        font-size: 4vw; /* Tamaño dinámico para pantallas grandes */
+        color: white;
+        font-family: 'Trebuchet MS', sans-serif;
+        text-align: center;
+        border-radius: 15px; /* Ajusta el valor para cambiar el redondeo */
+        padding: 10px;
+        padding: 10px;
+    }
+
+    .texto-sobre-imagen {
+        margin: 0; /* Elimina cualquier margen */
+        font-weight: bold;
+        position: absolute;
+        top: 50%; /* Centra verticalmente el texto */
+        left: 45%; /* Centra horizontalmente el texto */
+        transform: translate(-50%, -50%); /* Ajusta el centrado del texto */
+        color: white;
+        font-size: 2vw; /* Tamaño dinámico para pantallas grandes */
+        font-family: 'Trebuchet MS', sans-serif;
+        text-align: justify;
+        padding: 20px; /* Añade más espacio alrededor del texto */
+        width: 80%; /* Limita el ancho del texto para que no se vea comprimido */
+        line-height: 1.5; /* Ajusta el interlineado para mayor legibilidad */
+    }
+
+    /* Ajustes para pantallas pequeñas */
+    @media (max-width: 600px) {
+        .imagenes-dos {
+            display: block; /* Cambia el layout a bloque en pantallas pequeñas */
+            margin: 0;
+            padding: 0;
+        }
+
+        .imagen-con-texto {
+            width: 100%; /* Cada imagen ocupa el 100% del ancho */
+        }
+
+        .imagen-con-texto img {
+            width: 100%; /* Asegura que la imagen ocupe el 100% del ancho */
+            height: 405px; /* Ajusta manualmente la altura en pantallas pequeñas */
+            margin: 0; /* Elimina cualquier margen */
+            padding: 0; /* Elimina cualquier padding */
+        }
+
+        .txt-sobre-imagen {
+            font-size: 2.5em; /* Tamaño fijo para texto en pantallas pequeñas */
+            width: 90%;
+            padding: 15px;
+        }
+
+        .texto-sobre-imagen {
+            text-align: center;
+            font-size: 1.5em; /* Tamaño fijo para el texto en pantallas pequeñas */
+            width: 90%;
+            left: 50%;
+            padding: 15px;
+        }
+    }
+
+
+    /* ---------------------------------------DIV VALORES--------------------------------- */
+
+    .div-valores {
+        background-color: #7dd557;
+        text-align: center;
+        font-size: 4vw; /* Tamaño dinámico para pantallas grandes */
+        font-weight: bold;
+        min-height: 20px;
+        margin-top: 0; /* Elimina el margen superior */
+        padding: 30px; 
+        width: 100%;
+        box-sizing: border-box; /* Asegura que el padding se incluya dentro del ancho total */
+        overflow: hidden; /* Previene que el contenido se desborde */
+    }
+
+    .div-valores p {
+        color: white; 
+        margin: 0;
+    }
+
+    @media (max-width: 500px) {
+        .div-valores {
+            font-size: 2em; /* Ajusta el tamaño de la fuente en pantallas pequeñas */
+            padding: 20px; /* Reduce el padding para pantallas pequeñas */
+            box-sizing: border-box;
+            margin: 0; /* Asegura que no haya márgenes que causen el desbordamiento */
+        }
+    }
+
+
+    .valores {
+        display: flex;
+        justify-content: flex-start;
+        background-color: #102171;
+        padding: 10px;
+        color: white;
+        flex-wrap: wrap; /* Para que los elementos puedan moverse a la siguiente línea si es necesario */
+    }
+    
+    .valor-item {
+        flex-basis: 20%; /* Cada ítem ocupará el 20% del ancho en pantallas grandes */
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 40px;
+    }
+    
+    .valor-item img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: white;
+    }
+    
+    .valor-item p {
+        margin-top: 10px;
+        font-weight: bold;
+        color: white;
+        font-size: clamp(18px, 2vw, 24px); /* Tamaño dinámico con un mínimo y máximo */
+    }
+    
+    .valor-item g {
+        margin-top: 10px;
+        text-align: center;
+        font-weight: normal;
+        color: white;
+        font-size: clamp(14px, 1.5vw, 20px); /* Tamaño dinámico con un mínimo y máximo */
+        display: block;
+        max-width: 200px;
+        margin: 0 auto;
+        word-wrap: break-word;
+        line-height: 1.4;
+    }
+    
+
+    /* En pantallas pequeñas (hasta 500px), los círculos estarán 2 por fila */
+    @media (max-width: 500px) {
+        .valores {
+            justify-content: center; /* Alinear los elementos al centro */
+        }
+        
+        .valor-item {
+            flex-basis: 60%; /* Ocupa el 45% para tener espacio entre los elementos */
+            margin-bottom: 30px;
+            margin-top: 50px;
+        }
+        .valor-item p {
+            font-size: 1.5em;
+        }
+        
+        .valor-item g {
+
+            font-size: 1em;
+        }
+    }
+
+
+    /* ---------------------------------------DIV PROPUESTA COMERCIAL--------------------------------- */
+
+    .propuesta {
+        position: relative; /* Posiciona el cuadro negro sobre la imagen */
+        width: 100%;
+        height: auto;
+    }
+
+    .propuesta img {    
+        width: 100%; /* Asegura que la imagen siempre ocupe el 100% del ancho */
+        height: auto; /* Mantiene la proporción de la imagen */
+        min-height: 100%; /* Asegura que la imagen cubra al menos el 100% de la altura */
+        object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionarse */
+        display: block; 
+        pointer-events: none; 
+        user-select: none; 
+        -webkit-user-select: none; 
+        -ms-user-select: none; 
+        -moz-user-select: none; 
+    }
+
+    .propuesta-texto {
+        position: absolute;
+        text-align: left;
+        top: 12%;
+        left: 16%; 
+        right: 50%;
+        color:white;
+        font-size: 5vw; /* Tamaño dinámico para pantallas grandes */
+        font-family: 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+    }
+
+    .propuesta-txt {
+        position: absolute;
+        text-align: left;
+        top: 36%;
+        left: 3%; 
+        right: 50%;
+        color:white;
+        font-size: 3vw; /* Tamaño dinámico para pantallas grandes */
+        font-family: 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+    }
+
+    .propuesta-txt p{
+        font-size: 0%; /* Tamaño dinámico para pantallas grandes */
+    }
+
+
+    .ubicaciones {
+        position: relative;
+        width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho */
+        height: auto;
+    }
+    
+    .ubicaciones img {    
+        width: 100%; /* Asegura que la imagen siempre ocupe el 100% del ancho */
+        height: auto; /* Mantiene la proporción de la imagen */
+        object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionarse */
+        display: none; /* Oculta la imagen por defecto en pantallas grandes */
+    }
+
+    @media(min-width:1400px) {
+
+        .propuesta-texto {
+            top: 12%;
+            left: 16%; 
+            right: 50%;
+        }
+        
+        .propuesta-txt {
+            top: 35%;
+            left: 3%; 
+            right: 50%;
+        }
+
+    }
+
+    @media (max-width: 470px) {
+        .propuesta {
+            background-color: #102171;
+            width: 100%; /* Asegura que la imagen ocupe el 100% del ancho */
+            height: 600px; /* Ajusta manualmente la altura en pantallas pequeñas */
+        }
+        .propuesta img {
+            width: 0;
+        }
+
+        .propuesta-texto {
+            background-color: rgba(125, 213, 87, 1); /* Fondo verde */
+            top: 1%;
+            left: auto;
+            right: auto;
+            text-align: center;
+            font-size: 2.5em; /* Tamaño fijo para pantallas pequeñas */
+            padding: 10px 10px; /* Ajusta la cantidad de espacio arriba/abajo (20px) y a los lados (10px) */
+        }
+        
+        
+        .propuesta-txt {
+            top: 25%;
+            left: 5%;
+            right: 5%;
+            text-align: center;
+            font-size: 1.5em; /* Tamaño fijo para pantallas pequeñas */
+        }
+
+        .ubicaciones img {
+            display: block; /* Muestra la imagen en pantallas pequeñas */
+            width: 70%; /* Asegura que la imagen ocupe el 100% del ancho */
+            margin-top: 10px;
+            margin-left: 60px;
+            height: auto; /* Mantiene la proporción de la imagen */
+    }
+}
+    
