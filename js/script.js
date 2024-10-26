@@ -1,19 +1,27 @@
 /* -----------------------LETRA BLANCA EN BARRA DE NAVEGACION------------------------*/ 
-// Obtener el nombre del archivo actual (sin el directorio ni el dominio)
-const currentPage = window.location.pathname.split('/').pop();
+// Escuchar el evento 'DOMContentLoaded' para asegurar que el DOM esté completamente cargado
+document.addEventListener("DOMContentLoaded", function() {
+    // Obtener el pathname actual
+    const currentPath = window.location.pathname;
 
-// Obtener todos los enlaces de navegación
-const menuLinks = document.querySelectorAll('nav a');
+    // Obtener todos los enlaces de navegación
+    const menuLinks = document.querySelectorAll('nav a');
 
-// Iterar sobre los enlaces para agregar la clase 'active' al que coincida con la URL actual
-menuLinks.forEach(link => {
-    // Verificar si el href del enlace está en el pathname actual
-    if (window.location.pathname.includes(link.getAttribute('href'))) {
-        link.classList.add('active');
-    } else {
-        link.classList.remove('active');
-    }
+    // Iterar sobre los enlaces para agregar la clase 'active' al que coincida con la URL actual
+    menuLinks.forEach(link => {
+        const linkPath = link.getAttribute('href'); // Obtener el href del enlace
+
+        // Comprobar si el pathname actual coincide con el href del enlace
+        if (currentPath === linkPath || 
+            (currentPath.startsWith(linkPath) && linkPath !== '/')) ||
+            (currentPath === '/' && linkPath === '/')) {
+            link.classList.add('active'); // Agregar la clase 'active'
+        } else {
+            link.classList.remove('active'); // Quitar la clase 'active' si no coincide
+        }
+    });
 });
+
 
 /* -----------------------CARRUSEL DE IMAGENES EN INDEX------------------------*/ 
 
