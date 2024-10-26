@@ -3,14 +3,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll("nav a");
     const currentPath = window.location.pathname;
 
+    // Para detectar correctamente la página actual
     navLinks.forEach(link => {
-        // Si la ruta actual coincide con el href del enlace (y considera la terminación `/` para subpáginas)
-        if (currentPath === "/" && link.getAttribute("href") === "/") {
+        const linkHref = link.getAttribute("href");
+
+        // Verifica si es la página principal
+        if (currentPath === "/" && linkHref === "/") {
             link.classList.add("active");
-        } else if (currentPath.startsWith(link.getAttribute("href")) && link.getAttribute("href") !== "/") {
+        }
+        // Detecta la carpeta en la que estamos y resalta el enlace correspondiente
+        else if (currentPath.includes(linkHref) && linkHref !== "/") {
             link.classList.add("active");
         } else {
-            link.classList.remove("active");
+            link.classList.remove("active"); // Elimina "active" si no es el enlace actual
         }
     });
 });
