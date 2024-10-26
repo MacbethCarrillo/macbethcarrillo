@@ -1,16 +1,19 @@
 /* -----------------------LETRA BLANCA EN BARRA DE NAVEGACION------------------------*/ 
 document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll("nav a");
-    const currentPath = window.location.pathname; // Obtiene la ruta actual
+    const currentPath = window.location.pathname;
 
     navLinks.forEach(link => {
-        // Verifica si el href del enlace coincide con la ruta actual
-        if (link.getAttribute("href") === currentPath || (link.getAttribute("href") === "/" && currentPath === "/index.html")) {
-            link.classList.add("active"); // Añade la clase active al enlace correspondiente
+        // Si la ruta actual coincide con el href del enlace (y considera la terminación `/` para subpáginas)
+        if (currentPath === "/" && link.getAttribute("href") === "/") {
+            link.classList.add("active");
+        } else if (currentPath.startsWith(link.getAttribute("href")) && link.getAttribute("href") !== "/") {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
         }
     });
 });
-
 
 /* -----------------------CARRUSEL DE IMAGENES EN INDEX------------------------*/ 
 
