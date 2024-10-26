@@ -1,0 +1,311 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Trebuchet MS', regular;
+}
+
+header {
+    display: flex;
+    justify-content: center; /* Centramos todo el contenido horizontalmente */
+    align-items: center;
+    background-color: #10216f; 
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    position: relative;
+    font-family: 'Trebuchet MS', regular;
+    font-weight: regular;
+    z-index: 10;
+}
+
+a {
+    -webkit-tap-highlight-color: transparent; /* Quita el highlight en navegadores basados en WebKit */
+}
+
+.logo {
+    height: 60px;
+    margin-right: 40px; /* Espaciado entre logo y menú */
+    -webkit-tap-highlight-color: transparent; /* Quita el highlight en navegadores basados en WebKit */
+    outline: none; /* Evita los bordes de selección */
+    -webkit-user-select: none; /* Evita la selección de la imagen en móviles */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none; /* Evita bordes en el enlace o imagen */
+    border: none; /* Asegura que no haya bordes visibles */
+}
+
+a:active,
+a:focus {
+    outline: none;
+    border: none;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaciado de 20px entre los botones */
+}
+
+nav {
+    display: flex;
+    gap: 40px; /* Espaciado de 20px entre los enlaces del menú */
+}
+
+nav a {
+    color: #7dd557;
+    text-decoration: none;
+    font-weight: normal;
+    transition: background-color 0.3s; /* Suavizar el cambio de color de fondo */
+}
+
+nav a.active {
+    color:white; /* Color de texto */
+    font-weight: bold; /* Texto en negrita */
+    border-radius: 5px; /* Esquinas redondeadas */
+}
+
+
+.button {
+    background-color: white;
+    color: #10216f;
+    border: none;
+    padding: 16px 45px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS';
+    transition: background-color 0.3s, border-color 0.3s;
+    margin-left: 40px; /* Aseguramos un margen izquierdo para separar del menú */
+}
+
+
+.button:hover {
+    background-color: #7dd557; /*183196 */
+    color: #10216f;
+}
+
+/* Estilos para el botón del menú (solo visible en pantallas pequeñas) */
+.menu-btn {
+    display: none;
+    background-color: white;
+    color: #10216f;
+    font-size: 26px;
+    padding: 3px 10px;
+    cursor: pointer;
+    border-radius: 6px; /* Menos redondeado */
+    border: 2px solid #10216f;
+    transition: none; /* Sin efecto de hover */
+    outline: none; /* Evita borde de enfoque al hacer clic */
+    -webkit-tap-highlight-color: transparent; /* Elimina el highlight en dispositivos móviles */
+    -webkit-user-select: none; /* Evita que se seleccione el botón */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.menu-btn:active,
+.menu-btn:focus {
+    outline: none; /* Asegura que no aparezca un borde de selección */
+    border: none;
+}
+
+.menu-btn::before {
+    content: "☰"; /* Ícono de menú por defecto */
+}
+
+.menu-btn.active::before {
+    content: "✖"; /* Ícono de cerrar al activar */
+}
+
+@media (max-width: 1100px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6px 20px;
+    }
+
+    .logo {
+        margin: 0;
+        height: 55px;
+    }
+
+    .nav-container {
+        display: none;
+        width: 100%;
+        background-color: #10216f;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+        border-radius: 0 0 10px 10px;
+        transition: max-height 0.5s ease-in-out;
+        overflow: hidden;
+        max-height: 0;
+        z-index: 1;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-container.active {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-height: 255px; /* Incrementamos para incluir el nuevo enlace */
+    }
+
+    .menu-btn.active {
+        background-color: white; 
+    }
+
+    .menu-btn {
+        display: block;
+        margin-left: 5px;
+    }
+
+    .button {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+
+    nav a {
+        color: #7dd557;
+        text-align: center;
+        padding: 10px 0;
+        border-top: 1px solid #ffffff60; 
+    }
+
+    nav a.active {
+        background-color: white; /* Fondo blanco cuando el enlace está activo */
+        color: #10216f; /* Color de texto */
+        font-weight: bold; /* Texto en negrita */
+        border-radius: 5px; /* Esquinas redondeadas */
+    }
+
+    nav a:first-child {
+        border-top: none;
+    }
+
+    nav a:last-child {
+        border-bottom: 5px solid #ffffff60;
+    }
+
+    /* Agregamos el nuevo enlace de Rastreo solo para pantallas pequeñas */
+    nav a.rastreo {
+        color: #7dd557;
+        text-align: center;
+        padding: 10px 0;
+        border-top: 1px solid #ffffff60;
+    }
+}
+
+/* Ocultar el enlace de Rastreo en pantallas grandes */
+@media (min-width: 1100px) {
+    .rastreo {
+        display: none;
+    }
+}
+
+/* Mostrar el enlace de Rastreo en pantallas pequeñas */
+@media (max-width: 1100px) {
+    .rastreo {
+        display: block;
+    }
+}
+
+/* ---------------------------------------ICONO WHATSAPP FLOTANTE--------------------------------- */
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+}
+
+.whatsapp-float img {
+    width: 60px;
+    height: 60px;
+}
+
+
+@media(min-width: 1400px) and (max-width:1600px){
+
+    .whatsapp-float {
+        width: 70px;
+        height: 70px;
+        bottom: 20px;
+        right: 20px;
+
+    }
+    
+    .whatsapp-float img {
+        width: 70px;
+        height: 70px;
+    }
+}
+@media(min-width: 1601px){
+
+    .whatsapp-float {
+        width: 80px;
+        height: 80px;
+        bottom: 20px;
+        right: 20px;
+
+    }
+    
+    .whatsapp-float img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+/* ---------------------------------------DIV Footer--------------------------------- */
+
+.footer {
+    background-color: #7dd557;
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 20px; /* Añade espacio dentro del footer */
+    color: #10216f;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+    clear: both; /* Asegura que el footer esté debajo de cualquier contenido flotante */
+    position: relative; /* Asegura que se quede en su lugar */
+    z-index: 1; /* En caso de que la imagen tenga un z-index más alto */
+}
+
+
+.footer-link {
+    color: #10216f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+@media(max-width:500px){
+
+    .footer {
+        font-size: 0.9em;
+    }
+}
