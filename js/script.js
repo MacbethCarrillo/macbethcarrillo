@@ -1,23 +1,12 @@
 /* -----------------------LETRA BLANCA EN BARRA DE NAVEGACION------------------------*/ 
-// Escuchar el evento 'DOMContentLoaded' para asegurar que el DOM esté completamente cargado
-document.addEventListener("DOMContentLoaded", function() {
-    // Obtener el pathname actual
-    const currentPath = window.location.pathname;
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll("nav a");
+    const currentPath = window.location.pathname; // Obtiene la ruta actual
 
-    // Obtener todos los enlaces de navegación
-    const menuLinks = document.querySelectorAll('nav a');
-
-    // Iterar sobre los enlaces para agregar la clase 'active' al que coincida con la URL actual
-    menuLinks.forEach(link => {
-        const linkPath = link.getAttribute('href'); // Obtener el href del enlace
-
-        // Comprobar si el pathname actual coincide con el href del enlace
-        if (currentPath === linkPath || 
-            (currentPath.startsWith(linkPath) && linkPath !== '/')) ||
-            (currentPath === '/' && linkPath === '/')) {
-            link.classList.add('active'); // Agregar la clase 'active'
-        } else {
-            link.classList.remove('active'); // Quitar la clase 'active' si no coincide
+    navLinks.forEach(link => {
+        // Verifica si el href del enlace coincide con la ruta actual
+        if (link.getAttribute("href") === currentPath || (link.getAttribute("href") === "/" && currentPath === "/index.html")) {
+            link.classList.add("active"); // Añade la clase active al enlace correspondiente
         }
     });
 });
