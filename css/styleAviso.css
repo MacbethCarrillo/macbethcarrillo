@@ -1,0 +1,54 @@
+.div-Aviso {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    background-color: #10216f;
+    font-size: 4vw; /* Tamaño dinámico para pantallas grandes */
+    font-weight: bold;
+    min-height: 20px;
+    margin-top: 0;
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: white;
+}
+
+.div-Aviso img {
+    width: 120px; /* Ajusta el tamaño de la imagen según lo necesario */
+    height: auto;
+    margin-left: 60px;
+}
+
+.div-Aviso p {
+    margin: 0;
+}
+
+.div-AvisoTexto {
+    background-color: white;
+    color: black;
+    font-size: 1.5vw;
+    font-weight: bold;
+    line-height: 1.3;
+    padding: 20px;
+    margin: 20px 40px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.div-AvisoTexto p {
+    margin: 10px 0;
+}
+
+.div-AvisoTexto a {
+    color: black;
+    text-decoration: underline;
+}
+.div-AvisoTexto a.resaltar-rojo {
+    color: red;
+    text-decoration: underline; /* Mantiene el subrayado para el enlace */
+}
+
+.resaltar-rojo {
+    color: red;
+}
