@@ -227,7 +227,7 @@ nav a.active {
     position: fixed;
     width: 60px;
     height: 60px;
-    bottom: 50px;
+    bottom: 20px;
     right: 20px;
     background-color: #25D366;
     color: white;
