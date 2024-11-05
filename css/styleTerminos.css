@@ -52,3 +52,22 @@
 .resaltar-rojo {
     color: red;
 }
+@media(max-width:700px){
+    .div-Terminos img {
+        width: 25%; /* Ajusta el tamaño de la imagen según lo necesario */
+        margin-left: 20px;
+
+    }
+
+    .div-Terminos p {
+        font-size: 2.5em; /* Tamaño dinámico para pantallas grandes */
+    }
+
+    .div-TerminosTexto {
+        font-size: 1em;
+        margin: 1px 4px;
+        line-height: 1.3;
+
+    }
+
+}
